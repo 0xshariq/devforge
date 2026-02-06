@@ -1,0 +1,5 @@
+{
+    "dependencies": {
+        "@aws-sdk/client-translate": "^3.921.0"
+    }
+}
