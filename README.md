@@ -151,6 +151,7 @@ _For complete documentation, see [docs/commands.md](docs/commands.md)_
 | Category              | Representative Frameworks / Tools                         | Primary Languages                   |
 | --------------------- | --------------------------------------------------------- | ----------------------------------- |
 | C++/C                 | cppcms, crow, restbed, ulfius, wt                         | C, C++                              |
+| CLI                   | commanderjs, oclif, yargs                                 | JavaScript, TypeScript              |
 | Combination Templates | react+express, react+nestjs (fullstack combos)            | TS                                  |
 | Desktop               | electron, tauri, flutter, qt, nwjs, capacitor             | JS, TS, Rust, Dart, Python          |
 | Game                  | bevy, godot, unity, unreal, threejs, pygame, babylonjs    | Rust, C#, C++, JS, Python           |
