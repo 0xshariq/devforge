@@ -1,6 +1,6 @@
-# 📦 Package Installer CLI
+# 📦 DevForge
 
-[![npm version](https://img.shields.io/npm/v/@0xshariq/package-installer.svg)](https://www.npmjs.com/package/@0xshariq/package-installer)
+[![npm version](https://img.shields.io/npm/v/@dev-forge/devforge-cli.svg)](https://www.npmjs.com/package/@dev-forge/devforge-cli)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 
@@ -22,21 +22,21 @@ A **powerful, cross-platform CLI** for modern development workflows. Create proj
 
 ```bash
 # Using npm (recommended)
-npm install -g @0xshariq/package-installer
+npm install -g @dev-forge/devforge
 
 # Using yarn
-yarn global add @0xshariq/package-installer
+yarn global add @dev-forge/devforge
 
 # Using pnpm
-pnpm add -g @0xshariq/package-installer
+pnpm add -g @dev-forge/devforge
 ```
 
 > **📋 Complete Installation Guide**: For all installation methods including Python, Rust, Ruby, Go, Homebrew, and Docker, see [installation.md](docs/installation.md)
 
 ## 🐳 Docker Installation
 
-[![Docker Hub](https://img.shields.io/docker/v/0xshariq/package-installer-cli?label=Docker%20Hub)](https://hub.docker.com/r/0xshariq/package-installer-cli)
-[![Docker Image Size](https://img.shields.io/docker/image-size/0xshariq/package-installer-cli/latest)](https://hub.docker.com/r/0xshariq/package-installer-cli)
+[![Docker Hub](https://img.shields.io/docker/v/0xshariq/devforge-cli?label=Docker%20Hub)](https://hub.docker.com/r/0xshariq/devforge-cli)
+[![Docker Image Size](https://img.shields.io/docker/image-size/0xshariq/devforge-cli/latest)](https://hub.docker.com/r/0xshariq/devforge-cli)
 
 Run Package Installer CLI in a containerized environment with Docker:
 
@@ -44,47 +44,47 @@ Run Package Installer CLI in a containerized environment with Docker:
 
 ```bash
 # Pull the latest image
-docker pull 0xshariq/package-installer-cli:latest
+docker pull 0xshariq/devforge-cli:latest
 
 # Run interactively with current directory mounted
 docker run -it --rm \
   -v "$(pwd)":/home/pi/projects \
   -v ~/.gitconfig:/home/pi/.gitconfig:ro \
   -v ~/.ssh:/home/pi/.ssh:ro \
-  0xshariq/package-installer-cli:latest
+  0xshariq/devforge-cli:latest
 
 # Create a new project
 docker run -it --rm \
   -v "$(pwd)":/home/pi/projects \
-  0xshariq/package-installer-cli:latest create my-app
+  0xshariq/devforge-cli:latest create my-app
 
 # Analyze existing project
 docker run -it --rm \
   -v "$(pwd)":/home/pi/projects \
-  0xshariq/package-installer-cli:latest analyze
+  0xshariq/devforge-cli:latest analyze
 ```
 
 ### Docker Compose Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/0xshariq/package-installer-cli.git
-cd package-installer-cli
+git clone https://github.com/0xshariq/devforge-cli.git
+cd devforge-cli
 
 # Run with docker-compose
-docker-compose run --rm package-installer
+docker-compose run --rm devforge
 
 # Development mode with hot reload
-docker-compose --profile dev run --rm package-installer-dev
+docker-compose --profile dev run --rm devforge-dev
 ```
 
 ### Docker Image Variants
 
-| Tag | Description | Use Case |
-|-----|-------------|----------|
-| `latest` | Latest stable release | Production usage |
-| `dev` | Development version | Testing new features |
-| `v3.17.5` | Specific version | Version pinning |
+| Tag       | Description           | Use Case             |
+| --------- | --------------------- | -------------------- |
+| `latest`  | Latest stable release | Production usage     |
+| `dev`     | Development version   | Testing new features |
+| `v3.17.5` | Specific version      | Version pinning      |
 
 ### Volume Mounts
 
@@ -116,55 +116,55 @@ pi clean
 
 ## 📚 Documentation
 
-| Document | Description |
-|----------|-------------|
-| [� Installation](docs/installation.md) | Complete installation guide for all package managers |
-| [🐳 Docker](docs/docker.md) | Docker Usage and installation |
-| [📦 Bundle Info](docs/bundle-info.md) | Distribution bundle system and cross-platform packaging |
-| [📋 Commands](docs/commands.md) | Complete command reference with examples |
-| [⚡ Features](docs/features.md) | Detailed feature documentation and usage |
-| [🎨 Templates](docs/templates.md) | Available templates and customization options |
-| [🚀 Deployment](docs/deploy.md) | Deployment options and platform integration |
+| Document                               | Description                                             |
+| -------------------------------------- | ------------------------------------------------------- |
+| [� Installation](docs/installation.md) | Complete installation guide for all package managers    |
+| [🐳 Docker](docs/docker.md)            | Docker Usage and installation                           |
+| [📦 Bundle Info](docs/bundle-info.md)  | Distribution bundle system and cross-platform packaging |
+| [📋 Commands](docs/commands.md)        | Complete command reference with examples                |
+| [⚡ Features](docs/features.md)        | Detailed feature documentation and usage                |
+| [🎨 Templates](docs/templates.md)      | Available templates and customization options           |
+| [🚀 Deployment](docs/deploy.md)        | Deployment options and platform integration             |
 
 ## 🛠️ Command Overview
 
-| Command | Description | Key Options |
-|---------|-------------|-------------|
-| `pi create` | Create new projects from templates | Interactive framework selection |
-| `pi analyze` | Project analytics and insights | `--detailed`, `--export` |
-| `pi update` | Update project dependencies | `--latest` for breaking changes |
-| `pi doctor` | Diagnose and fix issues | `--fix`, `--node`, `--deps`, `--tools` |
-| `pi env` | Environment analysis | `--check`, `--generate`, `--validate` |
-| `pi clone` | Clone and setup repositories | `--offline`, `--shallow`, `--branch` |
-| `pi add` | Add features to projects | `--list` to see all features |
-| `pi clean` | Clean development artifacts | `--all`, `--dry-run` |
-| `pi cache` | Manage CLI cache | `clear`, `stats`, `optimize` |
-| `pi check` | Check package versions | `--verbose` for details |
-| `pi upgrade-cli` | Upgrade CLI version | Breaking change detection |
-| `pi size` | Show sizes for files and folders (accepts multiple paths; use `.` for current directory) | Shows per-path sizes, combined total, and top-N largest files |
-| `pi email` | Send feedback and messages | Direct communication with developer |
+| Command          | Description                                                                              | Key Options                                                   |
+| ---------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `pi create`      | Create new projects from templates                                                       | Interactive framework selection                               |
+| `pi analyze`     | Project analytics and insights                                                           | `--detailed`, `--export`                                      |
+| `pi update`      | Update project dependencies                                                              | `--latest` for breaking changes                               |
+| `pi doctor`      | Diagnose and fix issues                                                                  | `--fix`, `--node`, `--deps`, `--tools`                        |
+| `pi env`         | Environment analysis                                                                     | `--check`, `--generate`, `--validate`                         |
+| `pi clone`       | Clone and setup repositories                                                             | `--offline`, `--shallow`, `--branch`                          |
+| `pi add`         | Add features to projects                                                                 | `--list` to see all features                                  |
+| `pi clean`       | Clean development artifacts                                                              | `--all`, `--dry-run`                                          |
+| `pi cache`       | Manage CLI cache                                                                         | `clear`, `stats`, `optimize`                                  |
+| `pi check`       | Check package versions                                                                   | `--verbose` for details                                       |
+| `pi upgrade-cli` | Upgrade CLI version                                                                      | Breaking change detection                                     |
+| `pi size`        | Show sizes for files and folders (accepts multiple paths; use `.` for current directory) | Shows per-path sizes, combined total, and top-N largest files |
+| `pi email`       | Send feedback and messages                                                               | Direct communication with developer                           |
 
-*For complete documentation, see [docs/commands.md](docs/commands.md)*
+_For complete documentation, see [docs/commands.md](docs/commands.md)_
 
 ## 🏗️ Supported Technologies
 
-| Category | Representative Frameworks / Tools | Primary Languages |
-|----------|------------------------------------|-------------------|
-| C++/C | cppcms, crow, restbed, ulfius, wt | C, C++ |
-| Combination Templates | react+express, react+nestjs (fullstack combos) | TS |
-| Desktop | electron, tauri, flutter, qt, nwjs, capacitor | JS, TS, Rust, Dart, Python |
-| Game | bevy, godot, unity, unreal, threejs, pygame, babylonjs | Rust, C#, C++, JS, Python |
-| Go | gin, echo, beego, buffalo, chi, gqlgen | Go |
-| Javascript | react, next, vue, angular, express, nestjs, svelte, remix | JavaScript, TypeScript |
-| Mobile | react-native, flutter, ionic, nativescript, swiftui | JavaScript, TypeScript, Dart, Swift |
-| Python | django, flask, fastapi, flask, tornado, streamlit | Python |
-| Ruby | rails, sinatra, hanami, roda | Ruby |
-| Rust | axum, rocket, warp, tide, poem, gotham | Rust |
-| Web3 | hardhat, truffle, anchor, foundry, ethers.js, brownie | Solidity, Rust, Python, JS |
+| Category              | Representative Frameworks / Tools                         | Primary Languages                   |
+| --------------------- | --------------------------------------------------------- | ----------------------------------- |
+| C++/C                 | cppcms, crow, restbed, ulfius, wt                         | C, C++                              |
+| Combination Templates | react+express, react+nestjs (fullstack combos)            | TS                                  |
+| Desktop               | electron, tauri, flutter, qt, nwjs, capacitor             | JS, TS, Rust, Dart, Python          |
+| Game                  | bevy, godot, unity, unreal, threejs, pygame, babylonjs    | Rust, C#, C++, JS, Python           |
+| Go                    | gin, echo, beego, buffalo, chi, gqlgen                    | Go                                  |
+| Javascript            | react, next, vue, angular, express, nestjs, svelte, remix | JavaScript, TypeScript              |
+| Mobile                | react-native, flutter, ionic, nativescript, swiftui       | JavaScript, TypeScript, Dart, Swift |
+| Python                | django, flask, fastapi, flask, tornado, streamlit         | Python                              |
+| Ruby                  | rails, sinatra, hanami, roda                              | Ruby                                |
+| Rust                  | axum, rocket, warp, tide, poem, gotham                    | Rust                                |
+| Web3                  | hardhat, truffle, anchor, foundry, ethers.js, brownie     | Solidity, Rust, Python, JS          |
 
-*For detailed information and per-template lists, see [docs/templates.md](docs/templates.md)*
+_For detailed information and per-template lists, see [docs/templates.md](docs/templates.md)_
 
-*For detailed information, see [docs/templates.md](docs/templates.md)*
+_For detailed information, see [docs/templates.md](docs/templates.md)_
 
 ## 🎯 System Requirements
 
@@ -180,10 +180,10 @@ pi clean
 ```bash
 # Clear cache and reinstall
 npm cache clean --force
-npm install -g @0xshariq/package-installer
+npm install -g @dev-forge/devforge
 
 # Use npx if global installation fails
-npx @0xshariq/package-installer create my-app
+npx @dev-forge/devforge create my-app
 
 # Check CLI status
 pi doctor
@@ -200,22 +200,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔗 Links
 
 ### Official Packages
-- **NPM**: [@0xshariq/package-installer](https://www.npmjs.com/package/@0xshariq/package-installer)
-- **PyPI**: [package-installer-cli](https://pypi.org/project/package-installer-cli/)
-- **Crates.io**: [package-installer-cli](https://crates.io/crates/package-installer-cli)
-- **RubyGems**: [package-installer-cli](https://rubygems.org/gems/package-installer-cli)
-- **Docker Hub**: [0xshariq/package-installer-cli](https://hub.docker.com/r/0xshariq/package-installer-cli)
+
+- **NPM**: [@dev-forge/devforge](https://www.npmjs.com/package/@dev-forge/devforge)
+- **PyPI**: [devforge-cli](https://pypi.org/project/devforge-cli/)
+- **Crates.io**: [devforge-cli](https://crates.io/crates/devforge-cli)
+- **RubyGems**: [devforge-cli](https://rubygems.org/gems/devforge-cli)
+- **Docker Hub**: [0xshariq/devforge-cli](https://hub.docker.com/r/0xshariq/devforge-cli)
 
 ### Source Repositories
-- **Main (Node.js)**: [package-installer-cli](https://github.com/0xshariq/package-installer-cli)
+
+- **Main (Node.js)**: [devforge-cli](https://github.com/0xshariq/devforge-cli)
 - **Python**: [py_package_installer_cli](https://github.com/0xshariq/py_package_installer_cli)
 - **Rust**: [rust_package_installer_cli](https://github.com/0xshariq/rust_package_installer_cli)
 - **Ruby**: [ruby_package_installer_cli](https://github.com/0xshariq/ruby_package_installer_cli)
 - **Go**: [go_package_installer_cli](https://github.com/0xshariq/go_package_installer_cli)
 
 ### Support & Community
-- **Issues & Feedback**: [GitHub Issues](https://github.com/0xshariq/package-installer-cli/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/0xshariq/package-installer-cli/discussions)
+
+- **Issues & Feedback**: [GitHub Issues](https://github.com/0xshariq/devforge-cli/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/0xshariq/devforge-cli/discussions)
 
 ---
 

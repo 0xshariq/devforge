@@ -67,8 +67,8 @@ Before you begin, ensure you have the following installed:
 
 ```bash
 # 1. Fork and clone the repository
-git clone https://github.com/YOUR_USERNAME/package-installer-cli.git
-cd package-installer-cli
+git clone https://github.com/YOUR_USERNAME/devforge.git
+cd devforge-cli
 
 # 2. Install dependencies
 pnpm install
@@ -137,7 +137,7 @@ node dist/index.js analyze --help
 ### Directory Structure
 
 ```
-package-installer-cli/
+devforge-cli/
 ├── 📁 src/                          # Source code
 │   ├── 📁 commands/                 # CLI command implementations
 │   │   ├── 📄 create.ts            # Project creation command
@@ -218,7 +218,7 @@ package-installer-cli/
 - **Dependency Management**: Automatic dependency installation and configuration
 
 #### 4. Analytics System
-- **Real-time Data**: All analytics use real data from `~/.package-installer-cli/history.json`
+- **Real-time Data**: All analytics use real data from `~/.devforge-cli/history.json`
 - **Privacy-First**: No external data collection, all analytics are local
 - **Performance Tracking**: Cache hit rates, operation speeds, and usage patterns
 - **User Insights**: Framework preferences, feature adoption, and productivity metrics
@@ -1176,7 +1176,7 @@ console.log('Processing...');
 
 Your efforts help make development easier and more enjoyable for developers worldwide.
 
-[![Start Contributing](https://img.shields.io/badge/Start-Contributing-blue?style=for-the-badge&logo=github)](https://github.com/0xshariq/package-installer-cli/fork)
+[![Start Contributing](https://img.shields.io/badge/Start-Contributing-blue?style=for-the-badge&logo=github)](https://github.com/0xshariq/devforge-cli/fork)
 
 *Happy coding! 💙*
 

@@ -1,12 +1,12 @@
-version: '3.2.0'
+version: '1.0.0'
 
 services:
-  package-installer:
+  devforge:
     build:
       context: .
       dockerfile: Dockerfile
-    image: 0xshariq/package-installer-cli:latest
-    container_name: package-installer-cli
+    image: 0xshariq/devforge-cli:latest
+    container_name: devforge-cli
     volumes:
       # Mount local directory for project development
       - ./projects:/home/pi/projects
@@ -19,15 +19,15 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - package-installer-network
+      - devforge-network
 
   # Development service with hot reload
-  package-installer-dev:
+  devforge-dev:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    image: 0xshariq/package-installer-cli:dev
-    container_name: package-installer-cli-dev
+    image: 0xshariq/devforge-cli:dev
+    container_name: devforge-cli-dev
     volumes:
       - .:/app
       - /app/node_modules
@@ -41,12 +41,12 @@ services:
     stdin_open: true
     command: ["sh", "-c", "cd /app && npm run build && node dist/index.js"]
     networks:
-      - package-installer-network
+      - devforge-network
     profiles:
       - dev
 
 networks:
-  package-installer-network:
+  devforge-network:
     driver: bridge
 
 volumes:
