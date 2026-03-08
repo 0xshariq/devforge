@@ -74,7 +74,8 @@ const piGradient = gradient(['#00c6ff', '#0072ff']);
 
 // Configure main program with enhanced styling
 program
-  .name('pi')
+  .name('devforge')
+  .alias('dev')
   .description(chalk.hex('#667eea')('📦 Package Installer CLI') + chalk.hex('#95afc0')(' - Modern web application scaffolding tool'))
   .version(VERSION)
   .configureHelp({
