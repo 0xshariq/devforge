@@ -4,11 +4,6 @@ node_modules/
 # Build output
 dist/
 
-# Bundle output (for distribution to other package managers)
-bundle-standalone/
-bundle-executables/
-binary/
-
 
 # IDE and editor files
 /.vscode/

@@ -8,10 +8,6 @@ tsconfig.json
 .github/
 .gitignore
 .npmignore
-bundle-standalone/
-bundle-executables/
-binary/
-scripts/
 webpack.config.mjs
 
 
