@@ -244,10 +244,10 @@ export class AdvancedCacheManager {
     compressionThreshold?: number;
     enableEncryption?: boolean;
   } = {}) {
-    this.cacheDir = path.join(os.homedir(), '.package-installer-cli', 'cache');
+    this.cacheDir = path.join(os.homedir(), '.devforge', 'cache');
     this.cacheFile = path.join(this.cacheDir, 'advanced-cache.json');
     this.lockFile = path.join(this.cacheDir, 'cache.lock');
-    this.historyFile = path.join(os.homedir(), '.package-installer-cli', 'history.json');
+    this.historyFile = path.join(os.homedir(), '.devforge', 'history.json');
     this.strategy = options.strategy || 'lru';
     this.maxSize = options.maxSize || 100 * 1024 * 1024; // 100MB default
     this.compressionThreshold = options.compressionThreshold || 1024; // 1KB threshold

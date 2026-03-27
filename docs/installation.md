@@ -28,23 +28,23 @@ npx @0xshariq/package-installer create my-app
 
 ## 🐍 Python Installation
 
-[![PyPI version](https://img.shields.io/pypi/v/package-installer-cli.svg)](https://pypi.org/project/package-installer-cli/)
+[![PyPI version](https://img.shields.io/pypi/v/devforge.svg)](https://pypi.org/project/devforge/)
 
 ```bash
 # Using pip
-pip install package-installer-cli
+pip install devforge
 
 # Using pip3
-pip3 install package-installer-cli
+pip3 install devforge
 
 # Install for current user only
-pip install --user package-installer-cli
+pip install --user devforge
 
 # Upgrade to latest version
-pip install --upgrade package-installer-cli
+pip install --upgrade devforge
 ```
 
-**Official Package**: [pypi.org/project/package-installer-cli](https://pypi.org/project/package-installer-cli/)
+**Official Package**: [pypi.org/project/devforge](https://pypi.org/project/devforge/)
 
 **Source Code**: [github.com/0xshariq/py_package_installer_cli](https://github.com/0xshariq/py_package_installer_cli)
 
@@ -52,20 +52,20 @@ pip install --upgrade package-installer-cli
 
 ## 🦀 Rust Installation
 
-[![Crates.io version](https://img.shields.io/crates/v/package-installer-cli.svg)](https://crates.io/crates/package-installer-cli)
+[![Crates.io version](https://img.shields.io/crates/v/devforge.svg)](https://crates.io/crates/devforge)
 
 ```bash
 # Using cargo
-cargo install package-installer-cli
+cargo install devforge
 
 # Install from git (latest)
 cargo install --git https://github.com/0xshariq/rust_package_installer_cli
 
 # Update to latest version
-cargo install package-installer-cli --force
+cargo install devforge --force
 ```
 
-**Official Package**: [crates.io/crates/package-installer-cli](https://crates.io/crates/package-installer-cli)
+**Official Package**: [crates.io/crates/devforge](https://crates.io/crates/devforge)
 
 **Source Code**: [github.com/0xshariq/rust_package_installer_cli](https://github.com/0xshariq/rust_package_installer_cli)
 
@@ -73,20 +73,20 @@ cargo install package-installer-cli --force
 
 ## 💎 Ruby Installation
 
-[![Gem Version](https://img.shields.io/gem/v/package-installer-cli.svg)](https://rubygems.org/gems/package-installer-cli)
+[![Gem Version](https://img.shields.io/gem/v/devforge.svg)](https://rubygems.org/gems/devforge)
 
 ```bash
 # Using gem
-gem install package-installer-cli
+gem install devforge
 
 # Install for current user
-gem install --user-install package-installer-cli
+gem install --user-install devforge
 
 # Update to latest version
-gem update package-installer-cli
+gem update devforge
 ```
 
-**Official Package**: [rubygems.org/gems/package-installer-cli](https://rubygems.org/gems/package-installer-cli)
+**Official Package**: [rubygems.org/gems/devforge](https://rubygems.org/gems/devforge)
 
 **Source Code**: [github.com/0xshariq/ruby_package_installer_cli](https://github.com/0xshariq/ruby_package_installer_cli)
 
@@ -115,51 +115,51 @@ sudo mv pi /usr/local/bin/
 
 ```bash
 # Add the tap
-brew tap 0xshariq/package-installer-cli
+brew tap 0xshariq/devforge
 
-# Install package-installer-cli
-brew install package-installer-cli
+# Install devforge
+brew install devforge
 
 # Install with alias 'pi'
-brew install package-installer-cli --with-alias=pi
+brew install devforge --with-alias=pi
 
 # Update to latest version
-brew upgrade package-installer-cli
+brew upgrade devforge
 ```
 
 ### Alternative Installation Methods
 
 ```bash
 # Install directly from formula URL
-brew install https://raw.githubusercontent.com/0xshariq/homebrew-package-installer-cli/main/Formula/package-installer-cli.rb
+brew install https://raw.githubusercontent.com/0xshariq/homebrew-devforge/main/Formula/devforge.rb
 
 # Install with custom alias
-brew install package-installer-cli && ln -sf $(brew --prefix)/bin/package-installer-cli /usr/local/bin/pi
+brew install devforge && ln -sf $(brew --prefix)/bin/devforge /usr/local/bin/pi
 ```
 
 ---
 
 ## 🐳 Docker Installation
 
-[![Docker Hub](https://img.shields.io/docker/v/0xshariq/package-installer-cli?label=Docker%20Hub)](https://hub.docker.com/r/0xshariq/package-installer-cli)
+[![Docker Hub](https://img.shields.io/docker/v/0xshariq/devforge?label=Docker%20Hub)](https://hub.docker.com/r/0xshariq/devforge)
 
 ### Pull and Run
 
 ```bash
 # Pull latest image
-docker pull 0xshariq/package-installer-cli:latest
+docker pull 0xshariq/devforge:latest
 
 # Run interactively
 docker run -it --rm \
   -v "$(pwd)":/home/pi/projects \
   -v ~/.gitconfig:/home/pi/.gitconfig:ro \
   -v ~/.ssh:/home/pi/.ssh:ro \
-  0xshariq/package-installer-cli:latest
+  0xshariq/devforge:latest
 
 # Create new project
 docker run -it --rm \
   -v "$(pwd)":/home/pi/projects \
-  0xshariq/package-installer-cli:latest create my-app
+  0xshariq/devforge:latest create my-app
 ```
 
 ### Docker Compose
@@ -169,7 +169,7 @@ docker run -it --rm \
 version: '3.8'
 services:
   package-installer:
-    image: 0xshariq/package-installer-cli:latest
+    image: 0xshariq/devforge:latest
     volumes:
       - .:/home/pi/projects
       - ~/.gitconfig:/home/pi/.gitconfig:ro
@@ -183,7 +183,7 @@ services:
 docker-compose run --rm package-installer
 ```
 
-**Docker Hub**: [hub.docker.com/r/0xshariq/package-installer-cli](https://hub.docker.com/r/0xshariq/package-installer-cli)
+**Docker Hub**: [hub.docker.com/r/0xshariq/devforge](https://hub.docker.com/r/0xshariq/devforge)
 
 ---
 
@@ -217,8 +217,8 @@ pi create test-project
 
 ```bash
 # Clone repository
-git clone https://github.com/0xshariq/package-installer-cli.git
-cd package-installer-cli
+git clone https://github.com/0xshariq/devforge.git
+cd devforge
 
 # Install dependencies
 npm install
@@ -239,7 +239,7 @@ Download pre-compiled binaries from GitHub Releases:
 
 ```bash
 # Linux/macOS
-curl -L https://github.com/0xshariq/package-installer-cli/releases/latest/download/pi-linux -o pi
+curl -L https://github.com/0xshariq/devforge/releases/latest/download/pi-linux -o pi
 chmod +x pi
 sudo mv pi /usr/local/bin/
 
@@ -258,27 +258,27 @@ sudo mv pi /usr/local/bin/
 npm uninstall -g @0xshariq/package-installer
 
 # pip
-pip uninstall package-installer-cli
+pip uninstall devforge
 
 # cargo
-cargo uninstall package-installer-cli
+cargo uninstall devforge
 
 # gem
-gem uninstall package-installer-cli
+gem uninstall devforge
 
 # homebrew
-brew uninstall package-installer-cli
-brew untap 0xshariq/package-installer-cli
+brew uninstall devforge
+brew untap 0xshariq/devforge
 
 # docker
-docker rmi 0xshariq/package-installer-cli
+docker rmi 0xshariq/devforge
 ```
 
 ### Clean Up Cache and Config
 
 ```bash
 # Remove cache directory
-rm -rf ~/.package-installer-cli
+rm -rf ~/.devforge
 
 # Remove npm cache (if installed via npm)
 npm cache clean --force
@@ -320,8 +320,8 @@ gem cleanup
 ### Getting Help
 
 - **Documentation**: [README.md](README.md)
-- **GitHub Issues**: [github.com/0xshariq/package-installer-cli/issues](https://github.com/0xshariq/package-installer-cli/issues)
-- **Discussions**: [github.com/0xshariq/package-installer-cli/discussions](https://github.com/0xshariq/package-installer-cli/discussions)
+- **GitHub Issues**: [github.com/0xshariq/devforge/issues](https://github.com/0xshariq/devforge/issues)
+- **Discussions**: [github.com/0xshariq/devforge/discussions](https://github.com/0xshariq/devforge/discussions)
 
 ---
 
@@ -330,14 +330,14 @@ gem cleanup
 | Package Manager | Official Package URL |
 |-----------------|----------------------|
 | **npm** | [npmjs.com/package/@0xshariq/package-installer](https://www.npmjs.com/package/@0xshariq/package-installer) |
-| **PyPI** | [pypi.org/project/package-installer-cli](https://pypi.org/project/package-installer-cli/) |
-| **Crates.io** | [crates.io/crates/package-installer-cli](https://crates.io/crates/package-installer-cli) |
-| **RubyGems** | [rubygems.org/gems/package-installer-cli](https://rubygems.org/gems/package-installer-cli) |
-| **Docker Hub** | [hub.docker.com/r/0xshariq/package-installer-cli](https://hub.docker.com/r/0xshariq/package-installer-cli) |
+| **PyPI** | [pypi.org/project/devforge](https://pypi.org/project/devforge/) |
+| **Crates.io** | [crates.io/crates/devforge](https://crates.io/crates/devforge) |
+| **RubyGems** | [rubygems.org/gems/devforge](https://rubygems.org/gems/devforge) |
+| **Docker Hub** | [hub.docker.com/r/0xshariq/devforge](https://hub.docker.com/r/0xshariq/devforge) |
 
 | Source Code | Repository URL |
 |-------------|----------------|
-| **Main (Node.js)** | [github.com/0xshariq/package-installer-cli](https://github.com/0xshariq/package-installer-cli) |
+| **Main (Node.js)** | [github.com/0xshariq/devforge](https://github.com/0xshariq/devforge) |
 | **Python** | [github.com/0xshariq/py_package_installer_cli](https://github.com/0xshariq/py_package_installer_cli) |
 | **Rust** | [github.com/0xshariq/rust_package_installer_cli](https://github.com/0xshariq/rust_package_installer_cli) |
 | **Ruby** | [github.com/0xshariq/ruby_package_installer_cli](https://github.com/0xshariq/ruby_package_installer_cli) |

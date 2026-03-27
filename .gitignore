@@ -19,3 +19,4 @@ docs/COMMAND-IMPLEMENTATION-PLAN.md
 docs/subscription-opinion.md
 
 ./vendor/
+./.vscode/

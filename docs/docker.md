@@ -14,10 +14,10 @@ This document provides comprehensive instructions for building, running, and dep
 
 ```bash
 # Pull the latest version
-docker pull 0xshariq/package-installer-cli:latest
+docker pull 0xshariq/devforge:latest
 
 # Run the CLI
-docker run -it --rm 0xshariq/package-installer-cli:latest --help
+docker run -it --rm 0xshariq/devforge:latest --help
 ```
 
 ### Run with Project Volume
@@ -26,12 +26,12 @@ docker run -it --rm 0xshariq/package-installer-cli:latest --help
 # Create a new project in current directory
 docker run -it --rm \
   -v $(pwd):/home/pi/projects \
-  0xshariq/package-installer-cli:latest create
+  0xshariq/devforge:latest create
 
 # Add features to existing project
 docker run -it --rm \
   -v $(pwd):/home/pi/projects \
-  0xshariq/package-installer-cli:latest add auth
+  0xshariq/devforge:latest add auth
 ```
 
 ## Image Details
@@ -78,7 +78,7 @@ docker run -it --rm \
 -v ~/.pnpm-store:/home/pi/.pnpm-store
 
 # Custom configuration
--v ~/.package-installer-cli:/home/pi/.package-installer-cli
+-v ~/.devforge:/home/pi/.devforge
 ```
 
 ## Environment Variables
@@ -104,7 +104,7 @@ Map ports when running generated projects:
 docker run -it --rm \
   -v "$(pwd)":/home/pi/projects \
   -p 3000:3000 \
-  0xshariq/package-installer-cli:latest
+  0xshariq/devforge:latest
 ```
 
 ## Development Mode
@@ -295,5 +295,5 @@ docker run -it --rm \
 ## Support
 
 - **Docker Hub**: [0xshariq/package-installer](https://hub.docker.com/r/0xshariq/package-installer)
-- **GitHub Issues**: [Report Docker-specific issues](https://github.com/0xshariq/package-installer-cli/issues)
+- **GitHub Issues**: [Report Docker-specific issues](https://github.com/0xshariq/devforge/issues)
 - **Documentation**: [Main README](../README.md)

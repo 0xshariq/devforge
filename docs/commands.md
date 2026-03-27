@@ -88,8 +88,8 @@ Manage CLI authentication with secure local user accounts. Supports registration
 - After 3 commands, unverified users are blocked from all other commands until they complete 2FA with `pi auth verify`.
 
 **How it works:**
-- User credentials are stored locally in `~/.package-installer-cli/auth.json` with secure password hashing (scrypt + salt).
-- Session info is stored in `~/.package-installer-cli/session.json`.
+- User credentials are stored locally in `~/.devforge/auth.json` with secure password hashing (scrypt + salt).
+- Session info is stored in `~/.devforge/session.json`.
 - 2FA secret and verification status are stored per user.
 - No external authentication provider is required.
 - All subcommands are available via `pi auth <subcommand>`.
@@ -149,8 +149,8 @@ pi auth logout
 ```
 
 **How it works:**
-- User credentials are stored locally in `~/.package-installer-cli/auth.json` with secure password hashing (scrypt + salt).
-- Session info is stored in `~/.package-installer-cli/session.json`.
+- User credentials are stored locally in `~/.devforge/auth.json` with secure password hashing (scrypt + salt).
+- Session info is stored in `~/.devforge/session.json`.
 - No external authentication provider is required.
 - All subcommands are available via `pi auth <subcommand>`.
 - For more details, run `pi auth --help`.
@@ -295,7 +295,7 @@ Package Installer CLI Analytics
 - ✅ **Live Project Scanning** - Current directory analysis
 - ✅ **Package Version Checking** - Latest version comparisons
 - ✅ **Git Status Integration** - Repository health checks
-- ✅ **Usage History** - Data from `~/.package-installer-cli/history.json`
+- ✅ **Usage History** - Data from `~/.devforge/history.json`
 
 ---
 
@@ -883,7 +883,7 @@ pi cache
 # ├── Files Count: 1,247
 # ├── Hit Rate: 87.3%
 # ├── Last Cleanup: 3 days ago
-# └── Storage Location: ~/.package-installer-cli/
+# └── Storage Location: ~/.devforge/
 #
 # 📂 Cache Breakdown
 # ├── 📋 Project Metadata: 45MB (851 files)
@@ -948,7 +948,7 @@ pi cache optimize
 pi cache info
 
 # Configuration details:
-# ├── Cache Directory: ~/.package-installer-cli/
+# ├── Cache Directory: ~/.devforge/
 # ├── Max Size: 500MB
 # ├── Auto-cleanup: Enabled
 # ├── Compression: Enabled
@@ -1283,7 +1283,7 @@ pi cache clear preferences
 
 ### Global Configuration
 
-**Configuration File:** `~/.package-installer-cli/config.json`
+**Configuration File:** `~/.devforge/config.json`
 
 ```json
 {
@@ -1309,8 +1309,8 @@ pi cache clear preferences
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `PKG_CLI_CACHE_DIR` | Custom cache directory | `~/.package-installer-cli/` |
-| `PKG_CLI_CONFIG_DIR` | Configuration directory | `~/.package-installer-cli/` |
+| `PKG_CLI_CACHE_DIR` | Custom cache directory | `~/.devforge/` |
+| `PKG_CLI_CONFIG_DIR` | Configuration directory | `~/.devforge/` |
 | `PKG_CLI_DISABLE_CACHE` | Disable all caching | `false` |
 | `PKG_CLI_SILENT` | Suppress output | `false` |
 
@@ -1398,10 +1398,10 @@ pi doctor --export=debug.json
 - Use `pi env` for environment analysis
 
 **Community Support:**
-- 📚 [Documentation](https://github.com/0xshariq/package-installer-cli/wiki)
-- 🐛 [Bug Reports](https://github.com/0xshariq/package-installer-cli/issues)
-- 💬 [Discussions](https://github.com/0xshariq/package-installer-cli/discussions)
-- 🚀 [Feature Requests](https://github.com/0xshariq/package-installer-cli/issues/new?template=feature_request.md)
+- 📚 [Documentation](https://github.com/0xshariq/devforge/wiki)
+- 🐛 [Bug Reports](https://github.com/0xshariq/devforge/issues)
+- 💬 [Discussions](https://github.com/0xshariq/devforge/discussions)
+- 🚀 [Feature Requests](https://github.com/0xshariq/devforge/issues/new?template=feature_request.md)
 
 ## 📈 Performance Benefits
 
@@ -1428,7 +1428,7 @@ pi doctor --export=debug.json
 - 🎨 [Templates Documentation](templates.md) - Template guides and customization
 - 🚀 [Deployment Documentation](deploy.md) - Deployment strategies and platforms
 
-**Repository:** [Package Installer CLI on GitHub](https://github.com/0xshariq/package-installer-cli)
+**Repository:** [Package Installer CLI on GitHub](https://github.com/0xshariq/devforge)
 
 ---
 

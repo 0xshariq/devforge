@@ -837,7 +837,7 @@ export async function gatherProjectStats(workspacePath: string = process.cwd()):
   };
 
   try {
-    // Load real data from history.json in .package-installer-cli folder
+    // Load real data from history.json in .devforge folder
     const historyManager = new HistoryManager();
     await historyManager.init();
     const data = historyManager.getHistory();

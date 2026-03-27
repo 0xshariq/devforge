@@ -99,7 +99,7 @@ export class HistoryManager {
 
   constructor() {
     // Use the same hidden folder as other cache files
-    this.cliDir = path.join(os.homedir(), '.package-installer-cli');
+    this.cliDir = path.join(os.homedir(), '.devforge');
     this.historyFile = path.join(this.cliDir, 'history.json');
     this.frameworksFile = path.join(this.cliDir, 'frameworks.json');
     this.featuresFile = path.join(this.cliDir, 'features-usage.json');

@@ -45,7 +45,7 @@ export class UserCacheManager {
   private cache: UserCacheData;
 
   constructor() {
-    this.cacheDir = path.join(os.homedir(), '.package-installer-cli');
+    this.cacheDir = path.join(os.homedir(), '.devforge');
     this.cacheFile = path.join(this.cacheDir, 'user-preferences.json');
     this.cache = this.getDefaultCache();
   }

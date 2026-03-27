@@ -57,7 +57,7 @@ export function showAnalyzeHelp(): void {
       }
     ],
     tips: [
-      'Analytics data is collected from ~/.package-installer-cli/history.json',
+      'Analytics data is collected from ~/.devforge/history.json',
       'Use --export to backup your analytics data in JSON, XML, or YAML format',
       'Use --reset to start fresh analytics tracking'
     ]
@@ -115,7 +115,7 @@ export async function analyzeCommand(options: any = {}): Promise<void> {
  * Load analytics data from history.json
  */
 async function loadAnalyticsData(): Promise<any> {
-  const historyPath = path.join(os.homedir(), '.package-installer-cli', 'history.json');
+  const historyPath = path.join(os.homedir(), '.devforge', 'history.json');
 
   if (!await fs.pathExists(historyPath)) {
     return {
@@ -1196,7 +1196,7 @@ async function getFileSize(filename: string): Promise<string> {
  * Reset analytics data
  */
 async function resetAnalyticsData(): Promise<void> {
-  const historyPath = path.join(os.homedir(), '.package-installer-cli', 'history.json');
+  const historyPath = path.join(os.homedir(), '.devforge', 'history.json');
 
   const emptyData = {
     commands: {},

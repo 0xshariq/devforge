@@ -2022,8 +2022,8 @@ railway help                                   # Railway
 serverless help                                # Serverless
 
 # Community support
-# GitHub Issues: https://github.com/0xshariq/package-installer-cli/issues
-# Discussions: https://github.com/0xshariq/package-installer-cli/discussions
+# GitHub Issues: https://github.com/0xshariq/devforge/issues
+# Discussions: https://github.com/0xshariq/devforge/discussions
 ```
 
 ## 📚 Additional Resources
@@ -2099,10 +2099,10 @@ serverless help                                # Serverless
 ### Community & Support
 
 #### Package Installer CLI
-- [GitHub Repository](https://github.com/0xshariq/package-installer-cli) - Source code and issues
-- [GitHub Issues](https://github.com/0xshariq/package-installer-cli/issues) - Bug reports and features
-- [GitHub Discussions](https://github.com/0xshariq/package-installer-cli/discussions) - Community help
-- [Contributing Guide](https://github.com/0xshariq/package-installer-cli/blob/main/CONTRIBUTING.md) - How to contribute
+- [GitHub Repository](https://github.com/0xshariq/devforge) - Source code and issues
+- [GitHub Issues](https://github.com/0xshariq/devforge/issues) - Bug reports and features
+- [GitHub Discussions](https://github.com/0xshariq/devforge/discussions) - Community help
+- [Contributing Guide](https://github.com/0xshariq/devforge/blob/main/CONTRIBUTING.md) - How to contribute
 
 #### Platform Communities
 - [Vercel Community](https://github.com/vercel/vercel/discussions) - Vercel support
@@ -2117,8 +2117,8 @@ serverless help                                # Serverless
 #### Starter Templates
 ```bash
 # Clone example projects
-git clone https://github.com/0xshariq/package-installer-cli
-cd package-installer-cli/examples
+git clone https://github.com/0xshariq/devforge
+cd devforge/examples
 
 # Available examples:
 # - react-vercel/          # React app with Vercel deployment
@@ -2132,9 +2132,9 @@ cd package-installer-cli/examples
 ```
 
 #### Integration Examples
-- [CI/CD Workflows](https://github.com/0xshariq/package-installer-cli/tree/main/.github/workflows) - GitHub Actions examples
-- [Docker Configurations](https://github.com/0xshariq/package-installer-cli/tree/main/examples/docker) - Multi-stage builds
-- [Deployment Scripts](https://github.com/0xshariq/package-installer-cli/tree/main/scripts) - Automation examples
+- [CI/CD Workflows](https://github.com/0xshariq/devforge/tree/main/.github/workflows) - GitHub Actions examples
+- [Docker Configurations](https://github.com/0xshariq/devforge/tree/main/examples/docker) - Multi-stage builds
+- [Deployment Scripts](https://github.com/0xshariq/devforge/tree/main/scripts) - Automation examples
 
 ### Tools & Utilities
 
@@ -2242,4 +2242,4 @@ pi deploy --config
 4. **Follow Prompts**: Interactive setup and deployment
 5. **Celebrate**: Your app is live! 🎉
 
-*Need help? Check our comprehensive [troubleshooting guide](#troubleshooting) or [open an issue](https://github.com/0xshariq/package-installer-cli/issues).*
+*Need help? Check our comprehensive [troubleshooting guide](#troubleshooting) or [open an issue](https://github.com/0xshariq/devforge/issues).*

@@ -80,7 +80,7 @@ export function showCacheHelp(): void {
   createStandardHelp(helpConfig);
 }
 
-const CLI_CACHE_DIR = '.package-installer-cli';
+const CLI_CACHE_DIR = '.devforge';
 /**
  * Main cache command function
  */

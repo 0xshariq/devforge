@@ -18,7 +18,7 @@ export function getCliRootPath(): string {
   // All possible package names across different package managers
   const packageNames = [
     '@0xshariq/package-installer',  // npm
-    'package-installer-cli',        // PyPI, RubyGems, Rust crates
+    'devforge',        // PyPI, RubyGems, Rust crates
     'go_package_installer_cli'      // Go (from github.com/0xshariq/go_package_installer_cli)
   ];
 

@@ -22,7 +22,7 @@ export class AuthStore {
   private failedAttempts: Record<string, { count: number; lastAttempt: number }> = {};
 
   constructor() {
-    this.dir = path.join(os.homedir(), '.package-installer-cli');
+    this.dir = path.join(os.homedir(), '.devforge');
     this.file = path.join(this.dir, 'auth.json');
     this.sessionFile = path.join(this.dir, 'session.json');
   }

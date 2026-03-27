@@ -44,7 +44,7 @@ export function showUpgradeHelp(): void {
     tips: [
       'CLI will prompt for confirmation on major version upgrades',
       'Breaking changes are automatically detected and explained',
-      'Use npm install -g package-installer-cli@<version> to rollback'
+      'Use npm install -g devforge@<version> to rollback'
     ]
   };
 
@@ -254,7 +254,7 @@ export async function upgradeCliCommand(): Promise<void> {
       chalk.hex('#95afc0')('  • New analytics and tracking features') + '\n' +
       chalk.hex('#95afc0')('  • Better version management and upgrade warnings') + '\n\n' +
       chalk.cyan('📖 View full changelog:') + '\n' +
-      chalk.blue('  https://github.com/0xshariq/package-installer-cli/releases'),
+      chalk.blue('  https://github.com/0xshariq/devforge/releases'),
       {
         padding: 1,
         borderStyle: 'round',

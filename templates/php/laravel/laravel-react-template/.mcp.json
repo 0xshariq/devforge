@@ -1,11 +1,11 @@
 {
     "mcpServers": {
         "laravel-boost": {
-            "command": "wsl.exe",
+            "command": "",
             "args": [
-                "/home/sharique/.config/herd-lite/bin/php",
-                "/home/sharique/desktop/mcp-servers-and-cli/monorepo-package-installer-cli/core-cli/templates/php/laravel/template/artisan",
-                "boost:mcp"
+                "",
+                "",
+                ""
             ]
         }
     }

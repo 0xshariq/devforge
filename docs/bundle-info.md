@@ -353,8 +353,8 @@ pi create my-nextjs-app
 ```ruby
 class PackageInstaller < Formula
   desc "Modern web application scaffolding tool"
-  homepage "https://github.com/yourusername/package-installer-cli"
-  url "https://github.com/yourusername/package-installer-cli/releases/download/v3.10.0/pi-macos-x64.tar.gz"
+  homepage "https://github.com/yourusername/devforge"
+  url "https://github.com/yourusername/devforge/releases/download/v3.10.0/pi-macos-x64.tar.gz"
   sha256 "..."
   
   depends_on "node@22"
@@ -372,7 +372,7 @@ end
 
 **User Installation**:
 ```bash
-brew install package-installer-cli
+brew install devforge
 pi create my-app
 ```
 
@@ -664,8 +664,8 @@ terminal-kit      # Terminal utilities
 ### Publishing to RubyGems
 - [ ] Copy `bundle-standalone/` to Ruby gem
 - [ ] Test Ruby wrapper integration
-- [ ] Build: `gem build package-installer-cli.gemspec`
-- [ ] Publish: `gem push package-installer-cli-3.10.0.gem`
+- [ ] Build: `gem build devforge.gemspec`
+- [ ] Publish: `gem push devforge-3.10.0.gem`
 
 ### Publishing to GitHub Releases
 - [ ] Create release tag: `git tag v3.10.0`
@@ -689,8 +689,8 @@ terminal-kit      # Terminal utilities
 - **Last Updated**: October 5, 2025
 
 ### Contact & Resources
-- **Repository**: https://github.com/yourusername/package-installer-cli
-- **Issues**: https://github.com/yourusername/package-installer-cli/issues
+- **Repository**: https://github.com/yourusername/devforge
+- **Issues**: https://github.com/yourusername/devforge/issues
 - **Documentation**: See `docs/` directory
 - **License**: See LICENSE file
 
